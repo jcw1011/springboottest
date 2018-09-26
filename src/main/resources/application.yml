@@ -1,0 +1,19 @@
+server:
+  port: 9080
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 888
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  type-aliases-package: com.jcw.eneity
+  global-config:
+    db-config:
+      id-type: auto
+      field-strategy: not_empty
+      column-underline: true
+    refresh: true
+    map-underscore-to-camel-case: true
+    cache-enabled: false
